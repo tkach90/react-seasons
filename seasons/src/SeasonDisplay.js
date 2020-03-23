@@ -10,7 +10,7 @@ const seasonConfig = {
         text: "Burr, it's chilly",
         iconName: 'snowflake'
     }
-}
+};
 
 const getSeason = (lat, month) => {
     if (month > 2 && month < 9) {
@@ -20,7 +20,7 @@ const getSeason = (lat, month) => {
     }
 };
 
-const SeasonDisplay = (props) => {
+const SeasonDisplay = props => {
     const season = getSeason(props.lat, new Date().getMonth());
     const { text, iconName } = seasonConfig[season];
 
